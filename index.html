@@ -3,6 +3,10 @@ volanta: Entrevista al físico médico Darío Sanz
 main_title: "\"La radioterapia puede realizarse hasta en un 70% de los pacientes con diagnóstico temprano de cáncer\""
 note_author: Tomás Acevedo, Martín Nieva y Luciano Vivinetto
 subtitle: Darío Sanz es Ingeniero Nuclear, egresado en 1993 en el Instituto Balseiro, y también Doctor en Ingeniería nuclear por el mismo Instituto (en 2003).
+authors:
+    - Tomás Acevedo
+    - Martín Nieva
+    - Luciano Vivinetto
 ---
 <!DOCTYPE html>
 <html class="no-js" lang="es" xmlns="https://www.w3.org/1999/xhtml">
@@ -971,7 +975,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure class="ppalFigure clip lazy_2">
 <img class="ppal lazyload" src="fonts/lazy_square.svg" data-big="images/main_character.jpg" data-small="images/main_character.jpg" observer data-observer-function="loadLazyImg">
 </figure>
-<figcaption><p>Alberto Fernández visitó este sábado la Casa Azul, el Museo Frida Kahlo en México DF.</p></figcaption>
+<figcaption><p>{{ page.subtitle }}</p></figcaption>
 </div>
 <script type="text/javascript">
                     var jsonData = "%5B%7B%22contentTipo%22%3A%22imagen%22%2C%22autor%22%3A%22%22%2C%22epigrafe%22%3A%22Alberto%20Fern%C3%A1ndez%20visit%C3%B3%20este%20s%C3%A1bado%20la%20Casa%20Azul%2C%20el%20Museo%20Frida%20Kahlo%20en%20M%C3%A9xico%20DF.%22%2C%22class%22%3A%22horizontal%22%2C%22ads%22%3A%22%3Cdiv%20id%3D%5C%22caja4%5C%22%20class%3D%5C%22ad-slot%5C%22%20data-adtype%3D%5C%22caja%5C%22%3E%3C%5C%2Fdiv%3E%22%2C%22clippings%22%3A%7B%22big%22%3A%22https%3A%5C%2F%5C%2Fimages.clarin.com%5C%2F2019%5C%2F11%5C%2F02%5C%2Falberto-fernandez-visito-este-sabado___4KnUFHa6_1200x0__1.jpg%22%2C%22small%22%3A%22https%3A%5C%2F%5C%2Fimages.clarin.com%5C%2F2019%5C%2F11%5C%2F02%5C%2Falberto-fernandez-visito-este-sabado___4KnUFHa6_720x0__1.jpg%22%7D%7D%5D";
@@ -1074,11 +1078,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="entry-head col-lg-12 col-md-12 no-p ">
 <div class="content-top ">
 <div class="entry-author pull-left">
+
+<!--
 <a class="pull-left" target="_blank" href="#" title="Santiago Fioriti">
 <figure class="picture">
 <img class="img-responisve" src="images/56f299eb87a47e6c245df5fd.png" alt="Santiago Fioriti">
 </figure>
 </a>
+-->
+{% for author in page.authors %}
+<a class="pull-left" target="_blank" href="#" title="{{ author }}">
+<figure class="picture">
+<img class="img-responisve" src="images/{{ author }}.jpg" alt="{{ author }}">
+</figure>
+</a>
+{% endfor %}
+
 <div class="info pull-left">
 <a target="_blank" href="/autor/santiago-fioriti.html">
 <p itemprop="author">{{ page.note_author }}</p>
@@ -1093,22 +1108,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="entry-share ">
 <ul>
-<a id="id_facebook_share" href="#" data-url="http://bit.ly/2qjolaM?fromRef=facebook" data-red="facebook" onclick="sharePopUp(this.dataset);return false;">
+<a id="id_facebook_share" href="#!" data-red="facebook">
 <li class="ico-share fb">
 <i class="fa fa-facebook text-center" aria-hidden="true"></i>
 </li>
 </a>
-<a id="id_twitter_share" href="#" data-url="https://twitter.com/share?url=http://bit.ly/2qjolaM?fromRef=twitter&amp;text=Alberto Fernández se asesora con Roberto Lavagna y prepara un paquete de &quot;buenas noticias&quot;%20-" onclick="sharePopUp(this.dataset);return false;">
+<a id="id_twitter_share" href="#!" data-red="twitter">
 <li class="ico-share tw">
 <i class="fa fa-twitter text-center" aria-hidden="true"></i>
 </li>
 </a>
- <a id="id_whatsapp_share" href="whatsapp://send?text=Clarín: Alberto Fernández se asesora con Roberto Lavagna y prepara un paquete de &quot;buenas noticias&quot; http://bit.ly/2qjolaM?fromRef=whatsapp">
+ <a id="id_whatsapp_share" href="#!" data-red="whatsapp">
 <li class="ico-share whats">
 <i class="fa fa fa-whatsapp text-center" aria-hidden="true"></i>
 </li>
 </a>
-<a id="id_mail_share" href="mailto:?subject=Alberto Fernández se asesora con Roberto Lavagna y prepara un paquete de &quot;buenas noticias&quot;&amp;body=http://bit.ly/2qjolaM">
+<a id="id_mail_share" href="#!" data-red="mail">
 <li class="ico-share mail">
 <i class="fa fa-envelope text-center" aria-hidden="true"></i>
 </li>
@@ -1139,7 +1154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span><i class="fa fa-tags" aria-hidden="true"></i></span>
 <div class="items">
 <ul class="list-inline">
-<li><h2 itemprop="keywords"><a href="/tema/alberto-fernandez.html">Alberto Fernández</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/roberto-lavagna.html">Roberto Lavagna</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/elecciones-2019.html">Elecciones 2019</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/mexico.html">México</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/andres-manuel-lopez-obrador.html">Andrés Manuel López Obrador</a></h2></li>
+<li><h2 itemprop="keywords"><a href="#!">Darío Sanz</a></h2></li><li><h2 itemprop="keywords"><a href="#!">Física médica</a></h2></li><li><h2 itemprop="keywords"><a href="#!">Médicicina</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/mexico.html">Física médica</a></h2></li><li><h2 itemprop="keywords"><a href="/tema/andres-manuel-lopez-obrador.html">Radioterapia</a></h2></li>
 </ul>
 </div>
 </div>
