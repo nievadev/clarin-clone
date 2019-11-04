@@ -1250,72 +1250,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="comments col-lg-12 mb20" id="comments">
 <div class="head-comments">
 <div class="title">
-<a id="activateComments" data-target="#mainCommentsDivPase" data-toggle aria-expanded="false">
+<a id="activateComments" data-toggle aria-expanded="false">
 <div class="pull-left">
 <div class="content_numb_comment">
-<span class="numb_comment"></span>
+<span class="numb_comment">0</span>
 </div>
 <p> Comentarios</p>
 </div>
 <div class="pull-right icon"></div>
 </a>
 </div>
-</div>
-<div id="mainCommentsDivPase" class="collapse">
-<div class="loadComments">
-<p>CARGANDO COMENTARIOS</p>
-<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-</div>
-<div id="containerID-comments-pase" style="clear: both; margin:auto;"></div>
-<script type="text/javascript">
-
-
-            function myComments() {
-
-
-                                if ("1" == "1" && $(window).width() < 1024) {
-                    $(".news .entry-head .content-top .content-top-right .entry-comments, .intVideo .entry-head .content-top .content-top-right .entry-comments ").css("display", "block");
-                    $(".head-comments").css("display", "block");
-                    $('#count_comments').css("padding", "13px 15px");
-                    $('.entry-comments').css("height", "54px");
-                }
-
-                if (typeof gigya != 'undefined' && typeof $("#containerID-comments-pase").gigyaComments != "undefined") {
-
-                    var containerID = "containerID-comments-pase";
-                    var act1 = new gigya.socialize.UserAction();
-                                                            
-                    
-                    
-                    
-                    
-                    
-                    act1.setTitle('Alberto Fernández se asesora con Roberto Lavagna y prepara un paquete de &quot;buenas noticias&quot;');
-                    act1.setSubtitle('El viaje a México');
-                    act1.setLinkBack('/politica/alberto-fernandez-asesora-roberto-lavagna-prepara-paquete-buenas-noticias-_0_rrkIgGKx.html');
-                    act1.addActionLink('VER MÁS', '/politica/alberto-fernandez-asesora-roberto-lavagna-prepara-paquete-buenas-noticias-_0_rrkIgGKx.html');
-
-                    
-                    $("#containerID-comments-pase").gigyaComments({
-                        categoryID: "Com_03",
-                        streamID: "rrkIgGKx",
-                        streamTags: "2",
-                        userAction: act1,
-                        activeForComment: 1
-                    });
-                }
-            }
-
-
-
-            function GigyaLoadFunctions() {
-                myComments();
-            }
-            var onGigyaServiceReady = function() {
-                GigyaLoadFunctions();
-            }
-
-        </script>
 </div>
 <div id="error_message_active" class="mfp-hide white-popup-block modal-activacion">
 <h5>Clarín</h5>
