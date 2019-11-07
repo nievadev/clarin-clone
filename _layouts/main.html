@@ -725,7 +725,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 </div>
 <div class="section-name">
-<span>Ciencia</span>
+<span>{{ page.main_category }}</span>
 </div>
 <div class="nav-right">
 <div class="widgets">
@@ -953,11 +953,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="contentFlex">
 <div class="entry-title col-lg-6 col-md-12 col-sm-12 col-xs-12">
 <div class="title">
-<p class="volanta">Entrevista al físico médico Darío Sanz</p>
-<h1 id="title">"La radioterapia puede realizarse hasta en un 70% de los pacientes con diagnóstico temprano de cáncer"</h1>
+<p class="volanta">{{ page.volanta }}</p>
+<h1 id="title">{{ page.main_title }}</h1>
 <meta itemprop="headline" content="Alberto Fernández se asesora con Roberto Lavagna y prepara un paquete de &quot;buenas noticias&quot;">
 <div itemprop="description" class="bajada">
-<h2>Darío Sanz es Ingeniero Nuclear, egresado en 1993 en el Instituto Balseiro, y también Doctor en Ingeniería nuclear por el mismo Instituto (en 2003).<p></p>
+<h2>{{ page.subtitle }}<p></p>
 </h2></div>
 </div>
 </div>
@@ -965,7 +965,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure class="ppalFigure clip lazy_2">
 <img class="ppal lazyload" src="fonts/lazy_square.svg" data-big="images/main_character.jpg" data-small="images/main_character.jpg" observer data-observer-function="loadLazyImg">
 </figure>
-<figcaption><p>Darío Sanz es Ingeniero Nuclear, egresado en 1993 en el Instituto Balseiro, y también Doctor en Ingeniería nuclear por el mismo Instituto (en 2003).</p></figcaption>
+<figcaption><p>{{ page.subtitle }}</p></figcaption>
 </div>
 <script type="text/javascript">
                     var jsonData = "%5B%7B%22contentTipo%22%3A%22imagen%22%2C%22autor%22%3A%22%22%2C%22epigrafe%22%3A%22Alberto%20Fern%C3%A1ndez%20visit%C3%B3%20este%20s%C3%A1bado%20la%20Casa%20Azul%2C%20el%20Museo%20Frida%20Kahlo%20en%20M%C3%A9xico%20DF.%22%2C%22class%22%3A%22horizontal%22%2C%22ads%22%3A%22%3Cdiv%20id%3D%5C%22caja4%5C%22%20class%3D%5C%22ad-slot%5C%22%20data-adtype%3D%5C%22caja%5C%22%3E%3C%5C%2Fdiv%3E%22%2C%22clippings%22%3A%7B%22big%22%3A%22https%3A%5C%2F%5C%2Fimages.clarin.com%5C%2F2019%5C%2F11%5C%2F02%5C%2Falberto-fernandez-visito-este-sabado___4KnUFHa6_1200x0__1.jpg%22%2C%22small%22%3A%22https%3A%5C%2F%5C%2Fimages.clarin.com%5C%2F2019%5C%2F11%5C%2F02%5C%2Falberto-fernandez-visito-este-sabado___4KnUFHa6_720x0__1.jpg%22%7D%7D%5D";
@@ -1076,29 +1076,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 </a>
 -->
-
-<a class="pull-left" target="_blank" href="#" title="Tomás Acevedo">
+{% for author in page.authors %}
+<a class="pull-left" target="_blank" href="#" title="{{ author }}">
 <figure class="picture">
-<img class="img-responisve" src="images/Tomás Acevedo.jpg" alt="Tomás Acevedo">
+<img class="img-responisve" src="images/{{ author }}.jpg" alt="{{ author }}">
 </figure>
 </a>
-
-<a class="pull-left" target="_blank" href="#" title="Martín Nieva">
-<figure class="picture">
-<img class="img-responisve" src="images/Martín Nieva.jpg" alt="Martín Nieva">
-</figure>
-</a>
-
-<a class="pull-left" target="_blank" href="#" title="Luciano Vivinetto">
-<figure class="picture">
-<img class="img-responisve" src="images/Luciano Vivinetto.jpg" alt="Luciano Vivinetto">
-</figure>
-</a>
-
+{% endfor %}
 
 <div class="info pull-left">
 <a target="_blank" href="/autor/santiago-fioriti.html">
-<p itemprop="author">Tomás Acevedo, Martín Nieva y Luciano Vivinetto</p>
+<p itemprop="author">{{ page.note_author }}</p>
 </a>
 </div>
 </div>
@@ -1147,7 +1135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta itemprop="position" content="1">
 </li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 <a itemprop="item" href="/politica/">
-<span itemprop="name">Ciencia</span>
+<span itemprop="name">{{ page.main_category }}</span>
 </a>
 <meta itemprop="position" content="2"></li>
 </ul>
@@ -1165,55 +1153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 </div>
 <div class="body-nota">
-<p></p>
-
-<div class="sp__SM">
-<div class="content-new  ">
-<span class="tit-mobile">Mirá también</span>
-<div class="mg">
-<div class="wrap-figure">
-<figure>
-<a href="#!" target="_self">
-<img class="img-responsive" alt="" src="fonts/lazy_square.svg" data-big="/clarin-clone/images/4n.jpg" data-small="/clarin-clone/images/4n.jpg" observer data-observer-function="loadLazyImg">
-</a>
-</figure>
-</div>
-</div>
-<div class="mt">
-<span>Mirá también</span>
-<a href="#!" target="_self">
-<h2>4N: 13 chicos fallecidos por alcoholismo en Terrazas del Este</h2>
-</a>
-</div>
-</div>
-</div>
-
-<p></p>
-<p></p>
-
-<div class="sp__SM">
-<div class="content-new  ">
-<span class="tit-mobile">Mirá también</span>
-<div class="mg">
-<div class="wrap-figure">
-<figure>
-<a href="#!" target="_self">
-<img class="img-responsive" alt="" src="fonts/lazy_square.svg" data-big="/clarin-clone/images/Morgantini.png" data-small="/clarin-clone/images/Morgantini.png" observer data-observer-function="loadLazyImg">
-</a>
-</figure>
-</div>
-</div>
-<div class="mt">
-<span>Mirá también</span>
-<a href="#!" target="_self">
-<h2>La profesora de Física, Marina Morgantini, gana el Premio Nóbel de la Física 2019</h2>
-</a>
-</div>
-</div>
-</div>
-
-<p></p>
-
+{{ content }}
 </div>
 </div>
 </div>
